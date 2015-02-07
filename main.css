@@ -1,0 +1,68 @@
+body {
+   background-color: #ecf0f1;
+   text-align: center;
+   margin-top: 150px;
+}
+
+.github {
+   top: 0;
+   right: 0;
+   position: absolute;
+}
+
+.github svg {
+   x: 0px;
+   y: 0px;
+   enable-background: new 0 0 50 50;
+   width: 30px;
+   margin: 20px;
+}
+
+.github svg path {
+   fill-rule: "evenodd";
+   clip-rule: "evenodd";
+   fill: #34495e;
+}
+
+.github svg path:hover {
+   fill: #2ecc71;
+}
+
+#preview {
+   width: 150px;
+   height: 80px;
+   background-color: red;
+   margin: 0 auto;
+   margin-bottom: 15px;
+}
+
+#inputField {
+   width: 150px;
+   margin: 15px;
+   display: block;
+   margin: 0 auto;
+}
+
+#convert {
+   width: 150px;
+   margin-top: 15px;
+}
+
+code {
+   margin: 20px;
+   display: block;
+}
+
+a {
+   position: absolute;
+   bottom: 0px;
+   margin-left: -25px;
+   margin-bottom: 10px;
+   text-decoration: none;
+   color: #d3d7da;
+   font-family: sans-serif;
+}
+
+a:hover {
+   color: #2ecc71;
+}
