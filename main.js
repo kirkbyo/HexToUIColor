@@ -1,10 +1,9 @@
-
-
-var hexInput = document.getElementById("inputField")
+var hexInput = document.getElementById("inputField");
 var preview = document.getElementById("preview");
 var output = document.getElementById("output");
 var convert = document.getElementById("convert");
 
+// Checks if it is a hex
 function isHex(x) {
    var hexed = x.split("");
    if (hexed[0] == "#") {
@@ -34,6 +33,7 @@ function hashHex(hex) {
    }
 }
 
+// Checks if supplied hex contains a hash
 function isHashed(x) {
    var hexed = x.split("");
    if (hexed[0] != "#" ) {
@@ -43,6 +43,7 @@ function isHashed(x) {
    }
 }
 
+// Formats & Converts hex to UIColor in Swift Format
 function hexToUIColor(hex) {
    var rgb = hexToRgb(hex);
    var red = rgb[0] / 255.0;
