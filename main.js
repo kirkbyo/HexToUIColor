@@ -1,13 +1,47 @@
-// Gets users inputs
-// Checks if valid hex
-// Converts to UIColor Format
-// Displays conversation in output element
+
 
 var hexInput = document.getElementById("inputField")
 var preview = document.getElementById("preview");
 var output = document.getElementById("output");
 var convert = document.getElementById("convert");
 
+function isHex(x) {
+   var hexed = x.split("");
+   if (hexed[0] == "#") {
+      hexed.shift()
+      if (hexed.length == 6) {
+         return true;
+      } else {
+         return false;
+      }
+   } else if (hexed.length = 6) {
+      return true;
+   } else {
+      return false
+   }
+}
+
+// Adds a hash (#) to the hex
+function hashHex(hex) {
+   var hexed = hex.split("");
+   if (hexed[0] != "#") {
+      hexed.reverse();
+      hexed.push("#");
+      hexed.reverse();
+      return hexed.join("");
+   } else {
+      swal("Oops...", "Please enter a valid hex code!", "error");
+   }
+}
+
+function isHashed(x) {
+   var hexed = x.split("");
+   if (hexed[0] != "#" ) {
+      return true;
+   } else {
+      return false;
+   }
+}
 
 function hexToUIColor(hex) {
    var rgb = hexToRgb(hex);
@@ -20,6 +54,16 @@ function hexToUIColor(hex) {
 }
 
 convert.onclick = function() {
-   output.innerHTML = hexToUIColor(hexInput.value);
-   preview.style.backgroundColor = hexInput.value
+   if (isHex(hexInput.value) == true) {
+      output.innerHTML = hexToUIColor(hexInput.value);
+      if (isHashed(hexInput.value) == true) {
+         preview.style.backgroundColor = hashHex(hexInput.value);
+      } else if (isHashed(hexInput.value) == false) {
+         preview.style.backgroundColor = hexInput.value
+      } else {
+         swal("Oops...", "Please enter a valid hex code!", "error");
+      }
+   } else {
+      swal("Oops...", "Please enter a valid hex code!", "error");
+   }
 }
