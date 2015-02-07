@@ -54,15 +54,22 @@ code {
 }
 
 a {
-   position: absolute;
-   bottom: 0px;
-   margin-left: -25px;
-   margin-bottom: 10px;
    text-decoration: none;
    color: #d3d7da;
    font-family: sans-serif;
 }
 
+.follow {
+   position: absolute;
+   bottom: 0px;
+   margin-bottom: 10px;
+   margin-left: -50px;
+   color: #d3d7da;
+}
 a:hover {
    color: #2ecc71;
+}
+
+.follow a:nth-child(2):hover {
+   color: #3498db;
 }
