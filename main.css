@@ -1,7 +1,7 @@
 body {
    background-color: #ecf0f1;
    text-align: center;
-   margin-top: 150px;
+   margin-top: 105px;
 }
 
 .github {
@@ -29,23 +29,41 @@ body {
 }
 
 #preview {
-   width: 150px;
-   height: 80px;
-   background-color: red;
+   width: 250px;
+   height: 130px;
+   background-color: #3498db;
    margin: 0 auto;
    margin-bottom: 15px;
 }
 
 #inputField {
+   background-color: #E6E6E6;
+   border: 0;
+   height: 35px;
+   color: gray;
+   outline: 0;
+   font-size: 16pt;
    width: 150px;
-   margin: 15px;
+   text-align: center;
+   letter-spacing: .1em;
    display: block;
    margin: 0 auto;
 }
 
 #convert {
-   width: 150px;
    margin-top: 15px;
+   width: 150px;
+   height: 30px;
+   border: none;
+   background: #2ecc71;
+   text-decoration: none;
+   color: white;
+   outline: 0;
+   cursor: pointer;
+}
+
+#convert:active {
+   background: #27ae60;
 }
 
 code {
