@@ -68,3 +68,16 @@ convert.onclick = function() {
       swal("Oops...", "Please enter a valid hex code!", "error");
    }
 }
+
+// Generates a random Color preview color
+var colors = ["#3498db", "#2ecc71", "#1abc9c", "#E93A50"];
+
+function randomNum(e) {
+   return Math.floor(((Math.random() * e.length) + 1) - 1);
+}
+
+function randomColor() {
+   return colors[randomNum(colors)];
+}
+
+preview.style.backgroundColor = randomColor();
